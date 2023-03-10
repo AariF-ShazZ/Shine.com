@@ -6,8 +6,7 @@ import {
     ModalHeader,
     ModalFooter,
     ModalBody,
-    ModalCloseButton,
-    Box, Button, Lorem, useDisclosure, Text,Image
+    Box, Button, useDisclosure, Text
 } from '@chakra-ui/react'
 // import { BiPaste } from "react-icons/ai";
 import { BiPaste } from "react-icons/bi";

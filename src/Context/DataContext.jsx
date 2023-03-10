@@ -7,16 +7,15 @@ const [data , setData] = useState([])
 
 const getData = async (q) => {
   if(!q){
-   await  axios.get("http://localhost:9090/jobdata")
+   await  axios.get("https://eager-scarf.cyclic.app/jobdata")
     .then((r) => setData(r.data))
     .catch((e) => console.log(e))
   }else{
-    await axios.get("http://localhost:9090/jobdata" +`?q=${q}`)
+    await axios.get(`https://eager-scarf.cyclic.app/jobdata`+`?q=${q}`)
     .then((r) => setData(r.data))
     .catch((e) => console.log(e))
   }
 }
-
 
   return (
     <DataContext.Provider value={{getData , data }}>

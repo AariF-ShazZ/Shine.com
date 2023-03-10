@@ -1,5 +1,4 @@
 import React from 'react'
-import BottomNavbar from './BottomNavbar'
 import MiddleNavbar from './MiddleNavbar'
 import TopNavbar from './TopNavbar'
 

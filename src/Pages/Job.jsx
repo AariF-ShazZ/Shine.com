@@ -13,20 +13,21 @@ const Job = () => {
     if (data.length === 0) {
       getData()
     }
-  }, [])
+  }, [data.length,getData])
   const [current, setCurrent] = useState(data[0]?.id)
   const [right, setRight] = useState()
 
   const rightData = (id) => {
-    axios.get(`http://localhost:9090/jobdata/${id}`)
+    axios.get(`https://eager-scarf.cyclic.app/jobdata/${id}`)
       .then((r) => setRight(r.data))
       .catch((e) => console.log(data))
   }
+  
   useEffect(() => {
     if (data.length !== 0) {
       rightData(current)
     }
-  }, [current])
+  }, [current,data.length])
 
   const activeStyle = {
     border: "3px solid  #8652ff"
@@ -56,7 +57,7 @@ const Job = () => {
                   key={id}
                   onClick={() => setCurrent(id)}
                   style={
-                    current == id ? activeStyle : defaultStyle
+                    current === id ? activeStyle : defaultStyle
                   }
                 >
                   <JobLeft company_name={company_name} location={location} salary={salary} key={id} title={title} />

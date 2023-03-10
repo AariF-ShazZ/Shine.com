@@ -7,7 +7,7 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
-    Box,Button,Lorem,useDisclosure,Text
+    Box,Button,useDisclosure,Text
 } from '@chakra-ui/react'
 
 import { BsFillBriefcaseFill } from "react-icons/bs";
